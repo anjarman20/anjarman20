@@ -1,12 +1,12 @@
 # Giyanjar Wahyu Ego Agustino
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00BFFF&center=true&vCenter=true&width=500&lines=Owner+%26+Founder+of+Arqonara;Cloud+Engineer;Game+Hosting+Enthusiast;Infrastructure+Architect" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=ff0000&center=true&vCenter=true&width=500&lines=Owner+%26+Founder+of+Arqonara;Cloud+Engineer;Game+Hosting+Enthusiast;Infrastructure+Architect" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/🌐_Website-anjar.biz.id-00BFFF?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
-  <a href="mailto:giyanjar@anjar.biz.id"><img src="https://img.shields.io/badge/✉_Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/🌐_Website-anjar.biz.id-ff0000?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
+  <a href="mailto:anjarman200@gmail.com"><img src="https://img.shields.io/badge/✉_Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
   <a href="https://github.com/anjarman20"><img src="https://img.shields.io/badge/🐙_GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
