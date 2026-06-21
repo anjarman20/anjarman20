@@ -1,7 +1,5 @@
-# Giyanjar Wahyu Ego Agustino
-
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=22&pause=1000&color=ff0000&center=true&vCenter=true&width=500&lines=Owner+%26+Founder+of+Arqonara;Cloud+Engineer;Game+Hosting+Enthusiast;Infrastructure+Architect" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Inter&weight=600&size=22&pause=1000&color=ff0000&center=true&vCenter=true&width=500&lines=Giyanjar+Wahyu+Ego+Agustino;Owner+%26+Founder+of+Arqonara;Cloud+Engineer;Game+Hosting+Enthusiast" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -27,7 +25,7 @@ Cloud Engineer and Founder of **Arqonara**, a game hosting and cloud infrastruct
 | **Game Hosting** | High-performance server hosting with low latency and maximum uptime |
 | **Cloud Infrastructure** | Scalable cloud architecture, server management, and automation |
 
-Arqonara provides game hosting and server solutions focused on high performance, affordable pricing, and responsive customer support. Powered by AMD-based modern infrastructure across strategic locations, ensuring low latency and optimal uptime.
+Arqonara provides game hosting and server solutions focused on high performance, affordable pricing, and responsive customer support. Powered by AMD-based modern infrastructure ensuring low latency and optimal uptime.
 
 ---
 
@@ -40,15 +38,17 @@ Arqonara provides game hosting and server solutions focused on high performance,
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/discord/1093899694121418802?label=Online&color=5865F2&style=for-the-badge&logo=discord" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fanjarman20%2Fanjarman20%2Fmain%2Fcommunity-stats.json&query=members&label=Members&color=5865F2&style=for-the-badge&logo=discord" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fanjarman20%2Fanjarman20%2Fmain%2Fcommunity-stats.json&query=online&label=Online&color=5865F2&style=for-the-badge&logo=discord" />
 </p>
 
-| Detail | Value |
-|--------|-------|
-| Established | April 7, 2023 |
-| Members | 7,168+ |
-| Categories | Business, Programming, Gaming |
-| Focus | Game Hosting & Cloud Infrastructure |
+<p align="center">
+  | Detail | Value |
+  |--------|-------|
+  | Established | April 7, 2023 |
+  | Categories | Business, Programming, Gaming |
+  | Focus | Game Hosting & Cloud Infrastructure |
+</p>
 
 ### Social
 

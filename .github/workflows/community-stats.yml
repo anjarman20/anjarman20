@@ -1,0 +1,45 @@
+name: Update Community Stats
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch Discord community stats
+        run: |
+          curl -s "https://discord.com/servers/arqonara-com-1093899694121418802" \
+            -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" | \
+          python3 -c "
+import sys, re, json
+html = sys.stdin.read()
+members_match = re.search(r'([\d,]+)\s*Members', html)
+online_match = re.search(r'([\d,]+)\s*Online', html)
+data = {
+  'members': members_match.group(1).replace(',', '') if members_match else '7168',
+  'online': online_match.group(1) if online_match else '0',
+}
+with open('community-stats.json', 'w') as f:
+  json.dump(data, f)
+print('Members:', data['members'], '| Online:', data['online'])
+"
+
+      - name: Commit and push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add community-stats.json
+          if ! git diff --quiet --cached; then
+            git commit -m 'Update community stats [skip ci]'
+            git push
+          else
+            echo 'No changes to commit'
+          fi
