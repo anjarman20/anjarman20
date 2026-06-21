@@ -44,20 +44,24 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
 ## 🌐 Arqonara Community
 
 <p align="center">
-  <a href="https://discord.gg/arqonara-com-1093899694121418802">
+  <a href="https://discord.com/invite/eWFcW32r">
     <img src="https://img.shields.io/badge/Join_Arqonara_Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" />
   </a>
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/discord/1093899694121418802?label=Online%20Now&color=5865F2&style=for-the-badge&logo=discord" />
-  <img src="https://img.shields.io/badge/Members-7,168-5865F2?style=for-the-badge&logo=discord" />
+  <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fdiscord.com%2Fapi%2Fguilds%2F1093899694121418802%2Fwidget.json&query=presence_count&prefix=%F0%9F%9F%A1%20&label=Live%20Online&color=5865F2&style=for-the-badge" />
 </p>
 
 <table align="center">
   <tr>
     <td>📅 Server Created</td>
     <td><b>April 7th, 2023</b></td>
+  </tr>
+  <tr>
+    <td>👥 Total Members</td>
+    <td><b>7,168+</b></td>
   </tr>
   <tr>
     <td>💬 Chat Activity</td>
@@ -95,7 +99,7 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
     </tr>
     <tr>
       <td>🟢 Online Now</td>
-      <td><b>~784</b> <sub>(live via Discord badge)</sub></td>
+      <td><b>Live</b> <sub>(badge otomatis dari widget)</sub></td>
     </tr>
     <tr>
       <td>📅 Founded</td>
@@ -135,9 +139,6 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
   <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anjarman20&layout=compact&theme=github_dark&hide_border=true" />
 </p>
 
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=anjarman20&theme=darkhub&no-frame=true&row=1&column=6" />
-</p>
 
 <p align="center">
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=anjarman20&theme=react-dark&hide_border=true&area=true" />
@@ -150,7 +151,7 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
 <p align="center">
   <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/Website-anjar.biz.id-ff0000?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
   <a href="https://github.com/anjarman20"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
-  <a href="https://discord.gg/arqonara-com-1093899694121418802"><img src="https://img.shields.io/badge/Discord-Arqonara-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
+  <a href="https://discord.com/invite/eWFcW32r"><img src="https://img.shields.io/badge/Discord-Arqonara-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
   <a href="https://youtube.com/@Arqonara-Hosting"><img src="https://img.shields.io/badge/YouTube-Arqonara-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
 </p>
 
