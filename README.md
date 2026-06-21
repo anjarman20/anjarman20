@@ -42,13 +42,12 @@ Arqonara provides game hosting and server solutions focused on high performance,
   <img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fanjarman20%2Fanjarman20%2Fmain%2Fcommunity-stats.json&query=online&label=Online&color=5865F2&style=for-the-badge&logo=discord" />
 </p>
 
-<p align="center">
-  | Detail | Value |
-  |--------|-------|
-  | Established | April 7, 2023 |
-  | Categories | Business, Programming, Gaming |
-  | Focus | Game Hosting & Cloud Infrastructure |
-</p>
+<table align="center">
+  <tr><td><b>Detail</b></td><td><b>Value</b></td></tr>
+  <tr><td>Established</td><td>April 7, 2023</td></tr>
+  <tr><td>Categories</td><td>Business, Programming, Gaming</td></tr>
+  <tr><td>Focus</td><td>Game Hosting & Cloud Infrastructure</td></tr>
+</table>
 
 ### Social
 
