@@ -1,4 +1,4 @@
-# 💫 Giyanjar Wahyu Ego Agustino
+# Giyanjar Wahyu Ego Agustino
 
 <p align="center">
   <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00BFFF&center=true&vCenter=true&width=500&lines=Owner+%26+Founder+of+Arqonara;Cloud+Engineer;Game+Hosting+Enthusiast;Infrastructure+Architect" alt="Typing SVG" />
@@ -123,7 +123,7 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
 ## 🛠️ Tech Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=linux,bash,nginx,docker,kubernetes,cloudflare,aws,gcp,git,github,grafana,prometheus,nodejs,py,postgres,mongodb,redis&perline=9" />
+  <img src="https://skillicons.dev/icons?i=linux,bash,nginx,docker,cloudflare,aws,gcp,git,github,grafana,prometheus,nodejs,py&perline=9" />
 </p>
 
 ---
