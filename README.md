@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/🌐_Website-anjar.biz.id-ff0000?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
-  <a href="mailto:anjarman200@gmail.com"><img src="https://img.shields.io/badge/✉_Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-  <a href="https://github.com/anjarman20"><img src="https://img.shields.io/badge/🐙_GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+  <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/Website-anjar.biz.id-ff0000?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
+  <a href="mailto:anjarman200@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://github.com/anjarman20"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
 ---
@@ -37,7 +37,7 @@ I'm a **Cloud Engineer** and the **Owner & Founder of Arqonara**, a company at t
 
 Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada performa tinggi, harga terjangkau, dan dukungan pelanggan yang responsif. Dengan infrastruktur server modern berbasis AMD Processor, kami memastikan latensi rendah dan uptime optimal.
 
-> 💡 Hosting Murah, Performa Lancar — Mulai dari **Rp10.000** saja!
+> 💡 Hosting Murah, Performa Lancar — Mulai dari **Rp12.000** saja!
 
 ---
 
@@ -148,7 +148,7 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
 ## 🌐 Connect With Me
 
 <p align="center">
-  <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/Website-anjar.biz.id-00BFFF?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
+  <a href="https://anjar.biz.id"><img src="https://img.shields.io/badge/Website-anjar.biz.id-ff0000?style=for-the-badge&logo=google-chrome&logoColor=white" /></a>
   <a href="https://github.com/anjarman20"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://discord.gg/arqonara-com-1093899694121418802"><img src="https://img.shields.io/badge/Discord-Arqonara-5865F2?style=for-the-badge&logo=discord&logoColor=white" /></a>
   <a href="https://youtube.com/@Arqonara-Hosting"><img src="https://img.shields.io/badge/YouTube-Arqonara-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
@@ -157,7 +157,7 @@ Arqonara adalah penyedia layanan hosting game dan server yang berfokus pada perf
 ---
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=anjarman20&color=00BFFF&style=for-the-badge&label=Profile+Views" />
+  <img src="https://komarev.com/ghpvc/?username=anjarman20&color=ff0000&style=for-the-badge&label=Profile+Views" />
 </p>
 
 <p align="center">
