@@ -72,7 +72,6 @@ Arqonara provides game hosting and server solutions focused on high performance,
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=anjarman20&theme=react-dark&hide_border=true&area=true" />
 </p>
 
-> Note: `vercel.app` endpoint sering `DEPLOYMENT_PAUSED` (503). Fallback ke `anuraghazra1.vercel.app` yang lebih stabil.
 
 ---
 
