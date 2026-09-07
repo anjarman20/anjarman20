@@ -88,8 +88,11 @@ with open('assets/activity-graph-heatmap.svg', 'w') as f:
     f.write(heat)
 
 digest = hashlib.sha256((area_svg + heat).encode()).hexdigest()
-with open(HASH_PATH) as f:
-    old = f.read().strip()
+if os.path.exists(HASH_PATH):
+    with open(HASH_PATH) as f:
+        old = f.read().strip()
+else:
+    old = ''
 if digest == old:
     print('unchanged | total:', total)
 else:
