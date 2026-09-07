@@ -2,7 +2,7 @@ name: Update Activity Graph
 
 on:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '30 17 * * *'  # 00:30 WIB, after day rollover
   workflow_dispatch:
 
 permissions:
