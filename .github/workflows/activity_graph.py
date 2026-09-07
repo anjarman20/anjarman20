@@ -2,13 +2,13 @@ import json
 import urllib.request
 import os
 import re
+import hashlib
 import time
 from datetime import date, timedelta
 
 USER = 'anjarman20'
 README_PATH = 'README.md'
-MARK_START = '<!-- activity-graph:start -->'
-MARK_END = '<!-- activity-graph:end -->'
+HASH_PATH = '.github/workflows/.graph-hash'
 WEEKS = 52
 
 query = {'query': '{ user(login: "%s") { contributionsCollection { contributionCalendar { weeks { contributionDays { contributionCount date } } } } } }' % USER}
@@ -36,8 +36,8 @@ def color(c):
     t = min(c / max_c, 1.0)
     return '#%02x%02x%02x' % (int(8 + t * 22), int(48 + t * 151), int(56 + t * 199))
 
-# --- heatmap with per-day tooltips (inline in README -> <title> works on hover) ---
-CW, CH, GAP, PAD = 11, 11, 2, 4
+# --- heatmap ---
+CW, CH, GAP, PAD = 10, 10, 2, 16
 n_weeks = min(WEEKS, len(cal['weeks']))
 w = PAD * 2 + n_weeks * (CW + GAP)
 h = PAD * 2 + 7 * (CH + GAP)
@@ -48,64 +48,57 @@ for wi, wk in enumerate(cal['weeks'][-n_weeks:]):
         if not d['date']:
             continue
         y = PAD + date.fromisoformat(d['date']).weekday() * (CH + GAP)
-        c = d['contributionCount']
-        label = '%d contribution%s on %s' % (c, 's' if c != 1 else '', d['date'])
-        cells.append('<rect x="%d" y="%s" width="%d" height="%d" rx="2" fill="%s"><title>%s</title></rect>'
-                     % (x, y, CW, CH, color(c), label))
-# total label
+        cells.append('<rect x="%d" y="%d" width="%d" height="%d" rx="2" fill="%s"/>'
+                     % (x, y, CW, CH, color(d['contributionCount'])))
 total = sum(d['contributionCount'] for d in days)
-legend = ('<text x="%d" y="%d" fill="#8b949e" font-size="12" font-family="Segoe UI, sans-serif">%d contributions in the last year</text>'
-          % (PAD, h - 2, total))
 heat = ('<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d">'
-        '<g>%s</g>%s</svg>' % (w, h + 16, w, h + 16, ''.join(cells), legend))
+        '<g>%s</g><text x="%d" y="%d" fill="#8b949e" font-size="12" font-family="Segoe UI, sans-serif">%d contributions in the last year</text></svg>'
+        % (w, h, w, h, ''.join(cells), PAD, h - 2, total))
 
-# --- weekly area line with per-week tooltips ---
-LW, LH = w, 180
+# --- weekly area line ---
+LW, LH = 900, 220
 m = 10
 per_date = {d['date']: d['contributionCount'] for d in days}
 series = []
 cur = date.fromisoformat(days[0]['date'])
 end = date.fromisoformat(days[-1]['date'])
 while cur <= end:
-    series.append((cur, per_date.get(cur.isoformat(), 0)))
+    series.append(per_date.get(cur.isoformat(), 0))
     cur += timedelta(days=1)
-weekly = [sum(v for _, v in series[i:i + 7]) for i in range(0, len(series), 7)]
+weekly = [sum(series[i:i + 7]) for i in range(0, len(series), 7)]
 peak = max(weekly) or 1
 pw = (LW - m * 2) / max(len(weekly) - 1, 1)
-pts = [('%f' % (m + i * pw), '%f' % (LH - m - v / peak * (LH - m * 2))) for i, v in enumerate(weekly)]
-# invisible hover columns over each week
-hover = []
-for i, v in enumerate(weekly):
-    x0 = m + max(i * pw - pw / 2, 0)
-    x1 = m + min((i + 1) * pw + pw / 2, LW - m)
-    start_i = min(i * 7, len(series) - 1)
-    d0 = series[start_i][0].isoformat()
-    d1 = series[min(i * 7 + 6, len(series) - 1)][0].isoformat()
-    hover.append('<rect x="%f" y="0" width="%f" height="%d" fill="transparent"><title>%d turns: %d contributions (%s to %s)</title></rect>'
-                 % (x0, x1 - x0, LH, i + 1, v, d0, d1))
+pts = [('%.1f' % (m + i * pw), '%.1f' % (LH - m - v / peak * (LH - m * 2))) for i, v in enumerate(weekly)]
 area_svg = (
     '<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d">'
     '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">'
     '<stop offset="0" stop-color="#26a641" stop-opacity="0.9"/>'
     '<stop offset="1" stop-color="#2aa8c0" stop-opacity="0.05"/>'
     '</linearGradient></defs>'
-    '<polygon points="%s %s %s" fill="url(#g)"/>'
-    '<polyline points="%s" fill="none" stroke="#2aa885" stroke-width="2"/>'
-    '<g>%s</g></svg>'
-    % (LW, LH, '%f,%f ' % (m, LH - m), ' '.join('%s,%s' % p for p in pts), '%f,%f' % (LW - m, LH - m),
-       ' '.join('%s,%s' % p for p in pts), ''.join(hover))
+    '<polygon points="%s,%s %s %s,%s" fill="url(#g)"/>'
+    '<polyline points="%s" fill="none" stroke="#2aa885" stroke-width="2"/></svg>'
+    % (LW, LH, m, LH - m, ' '.join('%s,%s' % p for p in pts), LW - m, LH - m,
+       ' '.join('%s,%s' % p for p in pts))
 )
 
-block = '%s\n<div align="center">\n%s\n%s\n</div>\n%s' % (MARK_START, area_svg, heat, MARK_END)
+os.makedirs('assets', exist_ok=True)
+with open('assets/activity-graph.svg', 'w') as f:
+    f.write(area_svg)
+with open('assets/activity-graph-heatmap.svg', 'w') as f:
+    f.write(heat)
 
-with open(README_PATH) as f:
-    readme = f.read()
-if MARK_START in readme:
-    readme = re.sub(re.escape(MARK_START) + '.*?' + re.escape(MARK_END), lambda m: block, readme, flags=re.S)
+digest = hashlib.sha256((area_svg + heat).encode()).hexdigest()
+with open(HASH_PATH) as f:
+    old = f.read().strip()
+if digest == old:
+    print('unchanged | total:', total)
 else:
-    # replace old <img> block (lines 71-73 area)
-    readme = re.sub(r'<p align="center">\n\s*<img src="assets/activity-graph.*?</p>\n', lambda m: block + '\n', readme, flags=re.S)
-with open(README_PATH, 'w') as f:
-    f.write(readme)
-
-print('inline svg written | total:', total)
+    ts = int(time.time())
+    with open(README_PATH) as f:
+        readme = f.read()
+    readme = re.sub(r'(assets/activity-graph(?:-heatmap)?\.svg\?v=)\d+', r'\g<1>%d' % ts, readme)
+    with open(README_PATH, 'w') as f:
+        f.write(readme)
+    with open(HASH_PATH, 'w') as f:
+        f.write(digest)
+    print('updated readme cache-bust | total:', total)
