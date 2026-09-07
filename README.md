@@ -69,7 +69,8 @@ Arqonara provides game hosting and server solutions focused on high performance,
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=anjarman20&theme=react-dark&hide_border=true&area=true" />
+  <img src="assets/activity-graph.svg" alt="Contribution activity graph" />
+  <img src="assets/activity-graph-heatmap.svg" alt="Contribution heatmap" />
 </p>
 
 
