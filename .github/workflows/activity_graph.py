@@ -96,6 +96,20 @@ area_svg = (
 
 import os
 os.makedirs('assets', exist_ok=True)
+
+# cache-bust README <img> so GitHub Camo serves the new SVG
+readme_path = 'README.md'
+with open(readme_path) as f:
+    readme = f.read()
+for name in ('activity-graph', 'activity-graph-heatmap'):
+    import re
+    readme = re.sub(
+        r'(assets/%s\.svg\?v=)\d+' % name,
+        r'\g<1>%d' % __import__('time').time_ns(),
+        readme,
+    )
+with open(readme_path, 'w') as f:
+    f.write(readme)
 with open(OUT, 'w') as f:
     f.write(area_svg)
 with open(OUT.replace('.svg', '-heatmap.svg'), 'w') as f:

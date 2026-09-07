@@ -69,8 +69,8 @@ Arqonara provides game hosting and server solutions focused on high performance,
 </p>
 
 <p align="center">
-  <img src="assets/activity-graph.svg" alt="Contribution activity graph" />
-  <img src="assets/activity-graph-heatmap.svg" alt="Contribution heatmap" />
+  <img src="assets/activity-graph.svg?v=1788757972229258157" alt="Contribution activity graph" />
+  <img src="assets/activity-graph-heatmap.svg?v=1788757972229549857" alt="Contribution heatmap" />
 </p>
 
 
